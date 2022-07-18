@@ -1,5 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html, body, figure, header,img, div, section, article, input, button, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a,form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

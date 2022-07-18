@@ -23,8 +23,11 @@ function createLi(frequency, index) {
 }
 function showlist() {
   let body = document.querySelector("body");
+  let main = document.createElement("main");
+  main.classList.add("container");
+  body.appendChild(main);
   let list = document.createElement("ul");
   count.forEach((element, index) => list.appendChild(createLi(element, index)))
-  body.appendChild(list);
+  main.appendChild(list);
 }
 showlist();
