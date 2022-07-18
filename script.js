@@ -30,4 +30,18 @@ function showlist() {
   count.forEach((element, index) => list.appendChild(createLi(element, index)))
   main.appendChild(list);
 }
+function createBar(larguraDaBarra, index) {
+  let minhaBarra = document.createElement("div");
+  minhaBarra.innerText = `${index + 2}`;
+  minhaBarra.style.width = `${larguraDaBarra}px`
+  minhaBarra.style.background = "yellow";
+  return minhaBarra;
+}
+function showBars() {
+  let main = document.querySelector("main");
+  let bars = document.createElement("div");
+  count.forEach((element, index) => bars.appendChild(createBar(element, index)));
+  main.appendChild(bars);
+}
 showlist();
+showBars();
