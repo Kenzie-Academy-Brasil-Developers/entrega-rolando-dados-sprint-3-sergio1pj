@@ -1,4 +1,4 @@
-const count = new Array(12).fill(0);
+const count = new Array(12).fill(0); //frequencia da soma do lançamento de um dado
 function rollOneDice(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
@@ -15,4 +15,16 @@ function rollNTwoDice(n) {
   }
   return count;
 }
-console.log(rollNTwoDice(1000))
+rollNTwoDice(1000);
+function createLi(frequency, index) {
+  let tagLi = document.createElement("li");
+  tagLi.innerText = `${index + 1}: ${frequency}`;
+  return tagLi;
+}
+function showlist() {
+  let body = document.querySelector("body");
+  let list = document.createElement("ul");
+  count.forEach((element, index) => list.appendChild(createLi(element, index)))
+  body.appendChild(list);
+}
+showlist();
